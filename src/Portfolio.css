@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 3px solid limegreen !important; */
+}
+
+.banner{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-image: url(./Images/CV-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+}
+
+.profile-picture{
+    display: inline-block;
+    width: 20vh;
+}
+
+.header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.header ul li{
+    background-color: aqua;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.profile-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+header nav ul li{
+    font-size: 1.5vw;
+    list-style-type: none;
+    padding: 1vh;
+    background-color: #0D2239;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.current-tab, header ul li:hover{
+    background-color: #D3373E;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+    background-color: #0D2239;
+    color: white;
+    box-sizing: 0 0 5px;
+    padding: 15px;
+    align-items: center;
+    margin: 0 1.5vw 10vh 1.5vw;
+    min-width: 300px;
+}
+
+.container h2{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    margin-left: 2vw;
+}
+
+.container p{
+    line-height: 1.4;
+    text-align: justify;
+}
+
+label{
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link{
+    color: #D3373E;
+}
+
+.GithubLink{
+    text-decoration: none;
+}
+
+#B545659371, #B544114312, #B560997991, #B558396125{
+    display: none;
+}
+
+.ReadMore545659371, .ReadMore544114312, .ReadMore560997991,
+.ReadMore558396125{
+    display: none;
+    margin-top: 5px;
+}
+
+#B545659371:checked ~ .ReadMore545659371{
+    display: block;
+}
+
+#B544114312:checked ~ .ReadMore544114312{
+    display: block;
+}
+
+#B560997991:checked ~ .ReadMore560997991{
+    display: block;
+}
+
+#B558396125:checked ~ .ReadMore558396125{
+    display: block;
+}
+
+#B545659371:checked ~ label{
+    visibility: hidden;
+}
+
+#B545659371:checked ~ label::after{
+    content: 'Show less';
+    display: block;
+    visibility: visible;
+}
+
+#B544114312:checked ~ label{
+    visibility: hidden;
+}
+
+#B544114312:checked ~ label:after{
+    content: 'Show less';
+    display: block;
+    visibility: visible;
+}
+
+#B560997991:checked ~ label{
+    visibility: hidden;
+}
+
+#B560997991:checked ~ label:after{
+    content: 'Show less';
+    display: block;
+    visibility: visible;
+}
+
+#B558396125:checked ~ label{
+    visibility: hidden;
+}
+
+#B558396125:checked ~ label:after{
+    content: 'Show less';
+    display: block;
+    visibility: visible;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D3373E;
+    width: 10vw;
+    height: 100px;
+    margin-bottom: 15px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.image img{
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+
+@media (max-width: 1500px) {
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header nav ul li{
+        font-size: 3vw;
+        list-style-type: none;
+        padding: 1vh;
+        background-color: #0D2239;
+        flex-grow: 1;
+        text-align: center;
+        font-family: 'Paytone One', sans-serif;
+    }
+}
