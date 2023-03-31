@@ -22,7 +22,7 @@ useEffect(() => {
     )
 }, [])
 if(error){
-
+    return <div> <h1>Error Loding Content!</h1></div>
 }
 else if(!loading){
     return <div> <h1>Content is loading...</h1></div>
@@ -32,7 +32,7 @@ else{
     console.log(dataId);
     return(
         <main>
-            {data.filter(element => element.id == dataId[5] || element.id == dataId[2] || element.id == dataId[7] || element.id == dataId[11]).map(filteredElement => {
+            {data.filter(element => element.id === dataId[5] || element.id === dataId[2] || element.id === dataId[7] || element.id === dataId[11]).map(filteredElement => {
                 console.log(filteredElement.name)
                 return(
                     <div key={filteredElement.id} className="container">
@@ -43,11 +43,10 @@ else{
                         <input type="checkbox" id={"B" + filteredElement.id} />
                         {console.log("B" + filteredElement.id)}
                         <h2>{filteredElement.name}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>{filteredElement.description}</p>
                         <div className={"ReadMore" + filteredElement.id}>
-                        <p><a class="GithubLink" href={filteredElement.html_url} target="_blank"><span className="link">Link</span></a></p>
-                        <br />
+                            <p><a className="GithubLink" href={filteredElement.html_url} target="_blank"><span className="link">Link</span></a></p>
+                            <br />
                         </div>
                         <label htmlFor={"B" + filteredElement.id}>Show more</label>
                     </div>
